@@ -11,4 +11,3 @@ Utilizaremos un servidor creado con node/express.
 | /pets | debe devolver todas las mascotas |
 | /pets/:name |  debe devolver la mascota especificada |
 | /owner/:id |  debe devolver el dueño especificado |
-

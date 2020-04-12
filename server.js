@@ -79,6 +79,9 @@ app.use(
 app.use(bodyParser.json());
 
 //aquí tenemos que definir qué va a hacer el servidor con cada solicitud.
-
+//mostrar el archivo index.html
+// app.get('/', (req, res) => {
+//   res.sendFile('index.html');
+// });
 
 //aquí vamos a hacer que el servidor empiece a escuchar las solicitudes que lleguen.
