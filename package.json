@@ -11,7 +11,7 @@
   "author": "chefuss",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.19.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
