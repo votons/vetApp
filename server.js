@@ -1,5 +1,6 @@
 const express = require("express"); //traer el módulo express.
 const { pets, owners } = require("./fakeDatabase");
+const conexion = require("./conexiobd");
 
 //crear nuesstra app mediante el método express();
 const app = express();
