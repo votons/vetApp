@@ -1,4 +1,4 @@
-## Primera parte
+## Primera parte
 
 Nuestra aplicación funciona correctamente con los datos hardcodeados que estamos utilizando, pero necesitamos utilizar datos almacenados en un base de datos para que este completa, ademas de realizar varios cambios en la lógica de nuestros endpoints. Para poder realizar esto debemos:
 
