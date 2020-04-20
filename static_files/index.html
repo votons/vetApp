@@ -1,30 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VetApp</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <div id="app">
     <h1>Hellouuuu to the VetApp</h1>
-  <div id="content">
-    <h2>Qué necesitas?</h2>
-    <p>Dime lo que necesitas y te diré quien eres.</p>
-    <div id="buscador">
-      <label for="buscar">Buscar mascota</label>
-      <input type="text" name="buscar" id="buscar" placeholder="coloca el nombre de la mascota">
-      <button id="botonBuscar">Buscar</button>
+    <div id="content">
+      <h2>Qué necesitas?</h2>
+      <p>Dime lo que necesitas y te diré quien eres.</p>
+      <div id="botones">
+        <button id="verBuscarMascotas">Ver buscador de mascotas</button>
+        <button id="verBuscarDuenos">Ver buscador de dueños</button>
+        <button id="verMascotas">Ver todas las mascotas</button>
+        <button id="verDuenos">Ver todos los dueños</button>
+        <button id="verCrearMascota">Registrar mascota</button>
+        <button id="verCrearDueno">Registrar dueño</button>
+        </dﬂiv>
+        <div class="oculto" id="crear_mascota">
+          <div>
+            <label for="mascota_name">Nombre:</label>
+            <input placeholder="Rex" type="text" name="mascota_name" id="mascota_name">
+          </div>
+          <div>
+            <label for="breed">Raza:</label>
+            <select name="breed" id="breed">
+              <option value="dogo_argentino">Dogo argentino</option>
+              <option value="perro_de_pelea_cordobes">Perro de pelea cordobés</option>
+              <option value="perro_pila_argentino">Perro pila argentino</option>
+              <option value="perro_polar_argentino">Perro polar argentino</option>
+              <option value="perro_yagan">Perro yagán</option>
+              <option value="ovejero_magallanico">Ovejero magallánico</option>
+              <option value="perro_yagan">Perro yagán</option>
+              <option value="terrier_chileno">Terrier chileno</option>
+              <option value="perro_cimarron_uruguayo">Perro cimarrón uruguayo</option>
+              <option value="bull-mastiff_brasileiro">Bull-mastiff brasileiro</option>
+              <option value="bullbras">Bullbras</option>
+              <option value="bulldog_campeiro">Bulldog Campeiro</option>
+              <option value="dogo_brasileno">Dogo brasileño</option>
+              <option value="fila_brasileiro">Fila brasileiro</option>
+              <option value="original_fila_brasileiro">Original Fila Brasileiro</option>
+              <option value="pastor_ovejero_gaucho">Pastor ovejero gaucho</option>
+              <option value="perro_pastor_de_mantiqueira">Perro Pastor de Mantiqueira</option>
+              <option value="pit_monster">Pit Monster</option>
+              <option value="rastreador_brasileno">Rastreador brasileño</option>
+              <option value="terrier_brasileno">Terrier brasileño</option>
+            </select>
+          </div>
+          <div>
+            <label for="mascota_age">Edad:</label>
+            <input placeholder="225 millones de años" type="number" name="mascota_age" id="mascota_age">
+          </div>
+          <div>
+            <label for="mascota_date">Fecha de ingreso:</label>
+            <input type="date" name="mascota_date" id="mascota_date">
+          </div>
+          <div>
+            <label for="description">Descripción:</label>
+            <input placeholder="Aveces muerde" type="text" name="description" id="description">
+          </div>
+          <div>
+            <label for="picture">Imagen:</label>
+            <input placeholder="http://www.imagenes..." type="text" name="picture" id="picture">
+          </div>
+          <button id="botonCrearMascota">Crear mascota</button>
+        </div>
+        <div class="oculto" id="crear_dueno">
+          <div>
+            <label for="dueno_name">Nombre:</label>
+            <input placeholder="Mirtha" type="text" name="dueno_name" id="dueno_name">
+          </div>
+          <div>
+            <label for="last_name">Apellido:</label>
+            <input placeholder="Legrand" type="text" name="last_name" id="last_name">
+          </div>
+          <div>
+            <label for="dueno_age">Edad:</label>
+            <input placeholder="225 millones de años" type="number" name="dueno_age" id="dueno_age">
+          </div>
+          <div>
+            <label for="date">Fecha de ingreso:</label>
+            <input type="date" name="date" id="date">
+          </div>
+          <div>
+            <label for="phone">Telefono:</label>
+            <input placeholder="+54 11 4109-1700" type="text" name="phone" id="phone">
+          </div>
+          <div>
+            <button id="botonCrearDueno">Crear Dueño</button>
+          </div>
+        </div>
+        <div class="oculto" id="buscador_mascotas">
+          <label for="input_buscar_mascotas">Buscar mascotas</label>
+          <input type="text" name="input_buscar_mascotas" id="input_buscar_mascotas"
+            placeholder="coloca el nombre de la mascota">
+          <button id="botonBuscarMascotas">Buscar mascotas</button>
+          <div id="resultados_mascotas"></div>
+        </div>
+        <div class="oculto" id="buscador_duenos">
+          <label for="input_buscar_duenos">Buscar dueños</label>
+          <input type="text" name="input_buscar_duenos" id="input_buscar_duenos" placeholder="coloca el id del dueño">
+          <button id="botonBuscarDuenos">Buscar dueños</button>
+          <div id="resultados_dueno"></div>
+        </div>
+        <div class="oculto" id="resultados"></div>
+      </div>
     </div>
-    <div id="botones">
-      <button id="verMascotas">Ver todas las mascotas</button>
-      <button id="verDuenos">Ver todos los dueños</button>
-    </div>
-    <div id="resultados">aquí van a ir los resultados de la búsqueda</div>
-  </div>
-  </div>
-  <script src="js/helpers.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

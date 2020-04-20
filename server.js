@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
   res.sendFile("index.html");
 });
 
-// devolvemos todas las mascotas
+// Devolvemos una mascota en base en su nombre
 app.get("/pet/:pet_name", (req, res) => {
   const findedPet = pets.find(pet => pet.name == req.params.pet_name)
   res.send(findedPet);
@@ -36,7 +36,7 @@ app.get("/pets", (req, res) => {
   res.send(pets);
 });
 
-// devolvemos todas las mascotas
+// devolvemos un dueño es base en su id
 app.get("/owner/:owner_id", (req, res) => {
   const findedOwner = owners.find(owner => owner.id == req.params.owner_id)
   res.send(findedOwner);
