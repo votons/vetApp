@@ -13,12 +13,12 @@ verDuenos.addEventListener('click', () => {
 
 buscar.addEventListener('click', () => {
   const buscado = input.value;
-  getData('/pets/' + buscado, mostrarMascotas);
+  getData('/pet/' + buscado, mostrarMascotas);
 });
 
 resultados.addEventListener('click', () => {
   event.preventDefault();
   if (event.target.nodeName == 'A') {
-    getData('/owners/' + event.target.id, mostrarDuenos);
+    getData('/owner/' + event.target.id, mostrarDuenos);
   }
 })
