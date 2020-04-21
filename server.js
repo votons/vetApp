@@ -33,6 +33,8 @@ app.get("/", (req, res) => {
 app.get("/pet/:pet_name", buscadorMascotas.buscarNombrePet);
 
 app.get("/pets",buscadorMascotas.buscarMascotas);
+app.post("/pet",buscadorMascotas.agregarMascota);
+//app.delete("/pet/:pet_id",buscarMascotas.removerMascota);
 
 // devolvemos un dueño es base en su id
 app.get("/owner/:owner_id", (req, res) => {

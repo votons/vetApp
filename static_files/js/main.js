@@ -87,6 +87,7 @@ botonCrearMascota.addEventListener("click", () => {
   };
 
   registrarMascota(data);
+  alert('MASCOTA REGISTRADA CORRECTAMENTE!!!!!! FELIZ NAVIDAD!!');
 });
 
 resultados.addEventListener("click", () => {
