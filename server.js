@@ -1,6 +1,7 @@
 const express = require("express"); //traer el módulo express.
 const { pets, owners } = require("./fakeDatabase");
 require("./conexiobd");
+const controladorDuenios = require("./controladorDuenios");
 
 //crear nuesstra app mediante el método express();
 const app = express();
@@ -44,9 +45,7 @@ app.get("/owner/:owner_id", (req, res) => {
 });
 
 // devolvemos todos los dueños
-app.get("/owners", (req, res) => {
-  res.send(owners);
-});
+app.get("/owners", controladorDuenios.buscarOwners);
 
 //aquí vamos a hacer que el servidor empiece a escuchar las solicitudes que lleguen.
 app.listen(port, () => {
