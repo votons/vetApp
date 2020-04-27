@@ -32,3 +32,12 @@ Para poder seguir agregando contenido a nuestra aplicación necesitamos completa
 - DELETE `/pet/${pet_id}`
 - POST `/owner`
 - DELETE `/owner/${owner_id}`
+
+## Tercer parte
+
+Vamos a crear una relación entre nuestras dos entidades (mascotas y dueños) y vamos a hacer los cambios necesarios todo el proyecto para que estos cambios puedan coexistir:
+
+- Edita el archivo scripts.sql para establecer la relación de las tablas.
+- Modifica los INSERT para que los registros respeten esta relación.
+- Analiza los cambios a implementar en los endpoints.
+- Analiza los cambios a implementar en el Front.
