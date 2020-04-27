@@ -1,4 +1,9 @@
 const express = require("express"); //traer el módulo express.
+
+var buscadorMascotas=require('./controladores/mascota');
+
+//const { pets, owners } = require("./fakeDatabase");
+
 const { pets, owners } = require("./fakeDatabase");
 require("./conexiobd");
 const controladorDuenios = require("./controladorDuenios");
@@ -28,15 +33,9 @@ app.get("/", (req, res) => {
 });
 
 // Devolvemos una mascota en base en su nombre
-app.get("/pet/:pet_name", (req, res) => {
-  const findedPet = pets.find(pet => pet.name == req.params.pet_name)
-  res.send(findedPet);
-});
+app.get("/pet/:pet_name", buscadorMascotas.buscarNombrePet);
 
-// devolvemos todas las mascotas
-app.get("/pets", (req, res) => {
-  res.send(pets);
-});
+app.get("/pets",buscadorMascotas.buscarMascotas);
 
 // devolvemos un dueño es base en su id
 app.get("/owner/:owner_id", (req, res) => {

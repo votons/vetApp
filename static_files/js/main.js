@@ -14,6 +14,7 @@ const resultados = document.querySelector("#resultados"),
   inputBuscarMascotas = document.querySelector("#input_buscar_mascotas"),
   inputBuscarDuenos = document.querySelector("#input_buscar_duenos");
 
+
 // Ocultar y mostrar seccionoes
 verBuscarMascotas.addEventListener("click", () => {
   ocultarTodosMenos("buscador_mascotas");
