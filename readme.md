@@ -35,9 +35,9 @@ Para poder seguir agregando contenido a nuestra aplicación necesitamos completa
 
 ## Tercer parte
 
-Vamos a crear una relacion entre nuestras dos entidades (mascotas y dueños) y vamos a hacer los cambios necesarios en el :
+Vamos a crear una relación entre nuestras dos entidades (mascotas y dueños) y vamos a hacer los cambios necesarios todo el proyecto para que estos cambios puedan coexistir:
 
-- Edita el archivo scripts.sql para establecer la relacion de las tablas.
-- Modifica los INSERT para que los registros respeten esta relacion.
+- Edita el archivo scripts.sql para establecer la relación de las tablas.
+- Modifica los INSERT para que los registros respeten esta relación.
 - Analiza los cambios a implementar en los endpoints.
 - Analiza los cambios a implementar en el Front.
