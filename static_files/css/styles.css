@@ -20,6 +20,7 @@ img {
   margin: 0 auto;
 }
 button {
+  cursor: pointer;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 1rem;
@@ -40,7 +41,10 @@ button:focus {
   outline: none;
   background: salmon;
 }
-#buscador {
+#buscador_mascotas,
+#buscador_duenos,
+#crear_mascota,
+#crear_dueno {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -48,11 +52,19 @@ button:focus {
   border-top: 1px solid #999999;
   border-bottom: 1px solid #999999;
 }
+
+#crear_mascota,
+#crear_dueno {
+  display: block;
+  padding-bottom: 0;
+}
+
 label {
   flex-basis: 100%;
   margin-bottom: 0.5rem;
 }
-input {
+input,
+select {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin-right: 1rem;
@@ -78,6 +90,7 @@ input:focus {
   border-radius: 1rem;
   margin: 1rem 0;
   padding: 1rem;
+  max-width: 300px;
 }
 .image-container {
   max-height: 500px;
@@ -117,6 +130,16 @@ input:focus {
   background-position: left bottom;
   color: white;
 }
+
+#crear_dueno div:not(:last-of-type),
+#crear_mascota div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.oculto {
+  display: none !important;
+}
+
 @media screen and (min-width: 768px) {
   .pet {
     flex-basis: calc((100% / 3) - 3rem);
