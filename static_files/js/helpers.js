@@ -9,7 +9,8 @@ function getData(path, cb) {
     })
     .then(function(results) {
       resultados.innerHTML = "";
-      if (typeof results.length !== "undefined") {
+      if (results && typeof results.length !== "undefined") {
+        console.log(results);
         results.forEach(result => {
           cb(result);
         });
@@ -87,11 +88,11 @@ function crearContainerDuenos(dueno) {
   const heading = document.createElement("h3");
   heading.textContent = dueno.name;
   const pets = document.createElement("ul");
-  dueno.pets.forEach(pet => {
-    const li = document.createElement("li");
-    li.textContent = pet;
-    pets.append(li);
-  });
+  // dueno.pets.forEach(pet => {
+  //   const li = document.createElement("li");
+  //   li.textContent = pet;
+  //   pets.append(li);
+  // });
   container.append(heading, pets);
   return container;
 }
